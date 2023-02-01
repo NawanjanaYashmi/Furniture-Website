@@ -28,10 +28,10 @@ const Features = () => {
               //destructure item
               const { title, subtitle, icon} = item;
               return(
-                <div>
-                  <div>{icon}</div>
+                <div className='flex mb-6 lg:last:mb-0'>
+                  <div className='text-2xl mr-4 lg:text-3xl'>{icon}</div>
                   <div>
-                    <h4>{title}</h4>
+                    <h4 className='text-base lg:text-xl font-semibold mb-3'>{title}</h4>
                     <p>{subtitle}</p>
                   </div>
                 </div>

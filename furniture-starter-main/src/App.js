@@ -3,6 +3,7 @@ import React from 'react';
 // import components
 import Hero from './components/Hero';
 import Features from './components/Features';
+import NewItems from './components/NewItems';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
     mx-auto bg-white'>
       <Hero />
       <Features/>
+      <NewItems/>
     </div>
   );
 };
