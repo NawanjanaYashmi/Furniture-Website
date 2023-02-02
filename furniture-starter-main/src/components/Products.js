@@ -10,7 +10,16 @@ const Products = () => {
   //destructure products
   const {title, subtitle } = products;
   return (
-    <section className='section'>Products</section>
+    <section className='section'>
+      <div className='container mx-auto'>
+        <div>
+          <h2>{title}</h2>
+          <p>{subtitle}</p>
+        </div>
+        {/*slider*/}
+        <ProductSlider/>
+      </div>
+    </section>
   );
 };
 
