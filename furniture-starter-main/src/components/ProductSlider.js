@@ -22,17 +22,19 @@ const ProductSlider = () => {
   //destructure products
   const { pages } = products;
   return (
-    <Swiper modules={[Pagination, Navigation]} pagination = {{clickable: true}}>
+    <Swiper modules={[Pagination, Navigation]} pagination = {{clickable: true}} navigation={true} className='productSlider min-h-[1300px]'>
       {pages.map((page, index) => {
-        return <SwiperSlide key={index}>
+        return (
+          <SwiperSlide key={index}>
 
-          <div>
+          <div className='grid grid-cols-2 gap-x-5 md:grid-cols-3 lg:grid-cols-4 lg:gap-[30px]'>
             {page.productList.map((product, index) =>{
               //destructure product
               const {image, name, price,oldPrice} = product;
               return(
-                <div>
-                  <div>
+                <div className='w-full max-w-[290px] h-[380px] text-left'
+                key={index}>
+                  <div className='border hover:border-accent'>
                     <img src = {image.type} all='' />
                     <div>
                       <HiPlus className='text-xl text-primary' />
@@ -49,6 +51,7 @@ const ProductSlider = () => {
           </div>
 
         </SwiperSlide>
+        );
       })}
     </Swiper>
   );
