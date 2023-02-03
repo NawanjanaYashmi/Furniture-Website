@@ -22,7 +22,7 @@ const ProductSlider = () => {
   //destructure products
   const { pages } = products;
   return (
-    <Swiper>
+    <Swiper modules={[Pagination, Navigation]} pagination = {{clickable: true}}>
       {pages.map((page, index) => {
         return <SwiperSlide key={index}>
 
@@ -39,6 +39,10 @@ const ProductSlider = () => {
                     </div>
                   </div>
                   <div>{name}</div>
+                  <div>
+                    <div>$ {price}</div>
+                    <div>$ {oldPrice}</div>
+                  </div>
                 </div>
               );
             })}
