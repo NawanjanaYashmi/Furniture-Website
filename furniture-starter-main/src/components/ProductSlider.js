@@ -34,9 +34,9 @@ const ProductSlider = () => {
               return(
                 <div className='w-full max-w-[290px] h-[380px] text-left'
                 key={index}>
-                  <div className='border hover:border-accent'>
+                  <div className='border hover:border-accent rounded-[18px] w-full max-w-[285px] h-full max-h-[292px] flex items-center justify-center mb-[15px] relative transition'>
                     <img src = {image.type} all='' />
-                    <div>
+                    <div className='absolute bottom-4 right-[22px] bg-gray-200 w-8 h-8 rounded-full flex justify-centeritems-center cursor-pointer hover:bg-gray-300 transition'>
                       <HiPlus className='text-xl text-primary' />
                     </div>
                   </div>
