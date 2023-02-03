@@ -34,7 +34,11 @@ const ProductSlider = () => {
                 <div>
                   <div>
                     <img src = {image.type} all='' />
+                    <div>
+                      <HiPlus className='text-xl text-primary' />
+                    </div>
                   </div>
+                  <div>{name}</div>
                 </div>
               );
             })}
