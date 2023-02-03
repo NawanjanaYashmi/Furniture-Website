@@ -24,10 +24,28 @@ const ProductSlider = () => {
   return (
     <Swiper>
       {pages.map((page, index) => {
-        return <SwiperSlide></SwiperSlide>
+        return <SwiperSlide key={index}>
+
+          <div>
+            {page.productList.map((product, index) =>{
+              //destructure product
+              const {image, name, price,oldPrice} = product;
+              return(
+                <div>
+                  <div>
+                    <img src = {image.type} all='' />
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+
+        </SwiperSlide>
       })}
     </Swiper>
   );
 };
 
 export default ProductSlider;
+
+
